@@ -1,0 +1,1 @@
+mongodb+srv://<brad2>:<db#123456>@cluster0-ueays.mongodb.net/test?retryWrites=true&w=majority

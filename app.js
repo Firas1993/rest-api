@@ -1,13 +1,19 @@
-const app = require('express');
+const express = require('express');
+const app = express();
+
+//Middlewares
+app.use('/posts',()=>{
+    console.log('this is a midlewaez running');
+})
 
 //ROUTES
 app.get('/',(req,res)=>{
-    res.send('We are on home');
-//this excuting when we go to /
+    res.send("<h1>We are on home</h1>");
+//this excuting when we go to 
 })
 
 app.get("/posts", (req, res) => {
-  res.send("We are on post");
+  res.send("<h1>We are on post</h1>");
   //this excuting when we go to /
 });
 

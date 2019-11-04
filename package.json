@@ -1,0 +1,23 @@
+{
+  "name": "rest-tuto",
+  "version": "1.0.1",
+  "description": "creating a API with nodejs express js mongod b",
+  "main": "app.js",
+  "scripts": {
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Firas1993/rest-api.git"
+  },
+  "author": "Firas KEBSI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Firas1993/rest-api/issues"
+  },
+  "homepage": "https://github.com/Firas1993/rest-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}

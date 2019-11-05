@@ -28,8 +28,32 @@ router.post('/', async (req,res)=>{
     
 });
 // GET SPECIFIC POST 
-router.get('/:postId',(req,res)=>{
-    console.log(req.params.postId)
+router.get('/:postId',async (req,res)=>{
+    try {
+        const post = await Post.findById(req.params.postId);
+        res.json(post);
+    }catch(err){
+        res.json({ message: err });
+    }
+});
+
+//DELETE Post
+router.delete('/:postId',async (req,res)=>{
+    try{
+    const removedPost = await Post.remove({ _id : req.params.postId });
+    }catch(err){
+        res.json({ message: err });
+    }
+})
+// update POST 
+router.patch('/:postId',async (req,res)=>{
+    try{
+    const updatePost = await Post.updateOne({ _id : req.params.postId },{$set:
+        { title : req.body.title }
+    });
+    }catch(err){
+        res.json({ message: err });
+    }
 })
 
 

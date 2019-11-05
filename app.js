@@ -2,11 +2,12 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const nodemon = require('nodemon');
+const cors = require('cors');
 require("dotenv/config");
 
 
 const bodyParser = require("body-parser");
-
+//app.use(cors);
 app.use(bodyParser.json());
 
 //ROUTES
